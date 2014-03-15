@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Loomise aeg: Märts 15, 2014 kell 03:34 PM
+-- Loomise aeg: Märts 15, 2014 kell 04:34 PM
 -- Serveri versioon: 5.5.34
 -- PHP versioon: 5.4.22
 
@@ -33,7 +33,7 @@ CREATE TABLE IF NOT EXISTS `comment` (
 --
 
 INSERT INTO `comment` (`comment_id`, `comment_text`) VALUES
-(1, 'Loll jutt.');
+(1, 'Facebook it is');
 
 -- --------------------------------------------------------
 
@@ -153,7 +153,7 @@ CREATE TABLE IF NOT EXISTS `user` (
 --
 
 INSERT INTO `user` (`user_id`, `username`, `password`, `deleted`) VALUES
-(1, 'demo', 'demo', 0);
+(1, 'mulle meeldib Heli', 'kopter', 0);
 
 --
 -- Tõmmistatud tabelite piirangud
