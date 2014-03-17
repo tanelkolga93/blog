@@ -9,7 +9,7 @@
         <div class="pull-right"><span class="label"><?= $post['username'] ?></span> <span class="label">story</span>
             <span class="label">blog</span> <span class="label">personal</span></div>
         <? foreach ($tags as $tag): ?>
-            <a href="<?= BASE_URL ?>tags/view/<?= $tag['tag_id'] ?>"><span class="label label-info"
+            <a href="<?= BASE_URL ?>tags/view/<?= $tag['tag_id'] ?>/<?=$tag['tag_name'] ?>" > <span class="label label-info"
                                                                            style="background-color:#5bc0de"><?= $tag['tag_name'] ?></span></a>
         <? endforeach ?>
     </div>
