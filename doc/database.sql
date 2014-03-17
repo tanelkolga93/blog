@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Loomise aeg: Märts 15, 2014 kell 04:34 PM
+-- Loomise aeg: Märts 17, 2014 kell 09:37 PM
 -- Serveri versioon: 5.5.34
 -- PHP versioon: 5.4.22
 
@@ -130,7 +130,7 @@ INSERT INTO `tag` (`tag_id`, `tag_name`) VALUES
 (1, 'proov'),
 (2, 'yksyks'),
 (5, 'elmar'),
-(6, 'rakfargüriagjü'),
+(6, 'maakera'),
 (7, 'ups');
 
 -- --------------------------------------------------------
@@ -169,8 +169,8 @@ ALTER TABLE `post`
 -- Piirangud tabelile `post_comments`
 --
 ALTER TABLE `post_comments`
-  ADD CONSTRAINT `post_comments_ibfk_2` FOREIGN KEY (`comment_id`) REFERENCES `comment` (`comment_id`),
-  ADD CONSTRAINT `post_comments_ibfk_1` FOREIGN KEY (`post_id`) REFERENCES `post` (`post_id`);
+  ADD CONSTRAINT `post_comments_ibfk_1` FOREIGN KEY (`post_id`) REFERENCES `post` (`post_id`),
+  ADD CONSTRAINT `post_comments_ibfk_2` FOREIGN KEY (`comment_id`) REFERENCES `comment` (`comment_id`);
 
 --
 -- Piirangud tabelile `post_tags`
@@ -179,4 +179,3 @@ ALTER TABLE `post_tags`
   ADD CONSTRAINT `post_tags_ibfk_1` FOREIGN KEY (`post_id`) REFERENCES `post` (`post_id`),
   ADD CONSTRAINT `post_tags_ibfk_2` FOREIGN KEY (`tag_id`) REFERENCES `tag` (`tag_id`);
 SET FOREIGN_KEY_CHECKS=1;
-
