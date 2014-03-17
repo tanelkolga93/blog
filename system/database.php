@@ -37,17 +37,17 @@ function q($sql, & $query_pointer = NULL, $debug = FALSE)
 
 function get_one($sql, $debug = FALSE)
 {
-	global $db;
 
-	if ($debug) { // kui debug on TRUE
-		print "<pre>$sql</pre>";
-	}
-	switch (substr($sql, 0, 6)) {
-		case 'SELECT':
-			$q = mysqli_query($db, $sql) or db_error_out();
-			return mysqli_num_rows($q) ? mysqli_fetch_assoc($q) : NULL;
-		default:
-			exit('get_one("' . $sql . '") failed because get_one expects SELECT statement.');
+            global $db;
+
+               if ($debug) { // kui debug on TRUE
+                   print "<pre>$sql</pre>";
+     }
+     switch (substr($sql, 0, 6)) {
+                case 'SELECT':
+                            $q = mysqli_query($db, $sql) or db_error_out();
+                            $result = mysqli_fetch_array($q);
+                            return empty($result) ? NULL: $result[0];
 	}
 }
 
